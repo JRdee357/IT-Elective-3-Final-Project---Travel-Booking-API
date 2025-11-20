@@ -13,15 +13,7 @@ Backend service for searching flights, managing user profiles, and booking or ca
 ### Getting Started
 1. **Install dependencies**
    ```bash
-   npm install
-   ```
-2. **Create `.env`** (see `env.example`)
-   ```
-   PORT=5000
-   MONGO_URI=your-mongodb-uri
-   JWT_SECRET=your-secret
-   JWT_EXPIRES_IN=12h
-   SWAGGER_SERVER_URL=http://localhost:5000
+   npm install express helmet cors morgan dotenv swagger-ui-express swagger-jsdoc express-validator mongoose bcryptjs jsonwebtoken
    ```
 3. **Run locally**
    ```bash
@@ -46,7 +38,7 @@ Backend service for searching flights, managing user profiles, and booking or ca
 
 All booking and user detail routes require the `Authorization: Bearer <token>` header except registration and login.
 
-### Testing the API
+### Test the API
 - Use Postman/cURL to verify workflows (examples provided in Swagger docs)
 - Typical flow:
   1. `POST /api/v1/users` → store returned token
@@ -55,7 +47,7 @@ All booking and user detail routes require the `Authorization: Bearer <token>` h
   4. `POST /api/v1/bookings` with token to reserve seats
   5. `GET /api/v1/users/:userId` or `GET /api/v1/bookings/:bookingId`
 
-### Deployment (Vercel)
+### Vercel
 1. Push repo to GitHub.
 2. Import project in Vercel dashboard.
 3. Add Environment Variables (`MONGO_URI`, `JWT_SECRET`, etc.).
@@ -69,4 +61,5 @@ All booking and user detail routes require the `Authorization: Bearer <token>` h
 - [x] Swagger UI at `/api-docs`
 - [x] Deployment configuration for Vercel
 - [x] Security best practices (env vars, JWT, validation, consistent responses)
+
 
