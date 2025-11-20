@@ -11,7 +11,7 @@ Backend service for searching flights, managing user profiles, and booking or ca
 - Production-ready configuration for Vercel serverless deployment
 
 ### Getting Started
-1. **Install dependencies**
+1. **Install dependencies updated due to needing more than simply node, swagger, express, mongoose**
    ```bash
    npm install express helmet cors morgan dotenv swagger-ui-express swagger-jsdoc express-validator mongoose bcryptjs jsonwebtoken
    ```
